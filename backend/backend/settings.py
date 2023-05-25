@@ -107,17 +107,10 @@ USE_L10N = True
 USE_TZ = True
 
 
-# При планировании архитектуры было решено,
-# что статические файлы Django должны быть доступны по адресу /static/
 STATIC_URL = '/static/'
-# Указываем корневую директорию для сборки статических файлов;
-# в контейнере это будет /app/collected_static
+
 STATIC_ROOT = BASE_DIR / 'collected_static'
-# Теперь при вызове команды python manage.py collectstatic
-# Django будет копировать все статические файлы в директорию collected_static. 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
-]
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
